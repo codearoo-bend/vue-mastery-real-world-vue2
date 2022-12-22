@@ -4,6 +4,7 @@ import EventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
 import UserShow from "../views/UserShow.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     name: "user-show",
     component: UserShow,
     props: true,
+  },
+  {
+    path: "*",
+    name: "page-not-found",
+    component: PageNotFound,
   },
 ];
 
